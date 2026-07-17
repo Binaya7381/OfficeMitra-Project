@@ -1,12 +1,17 @@
 /* ==========================================
-   OfficeMitra - Professional CSS v2.0
+   OfficeMitra CSS v3.0
+   Part 1
 ========================================== */
+
+/* ---------- Google Font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ---------- Reset ---------- */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 
 html{
@@ -14,239 +19,293 @@ html{
 }
 
 body{
-    background:#f5f7fb;
-    color:#222;
-    line-height:1.6;
+
+    font-family:'Poppins',sans-serif;
+    background:#f6f8fc;
+    color:#1f2937;
+
 }
 
-/* ================= NAVBAR ================= */
+/* ---------- Container ---------- */
 
-nav{
-    width:100%;
-    background:#0f172a;
-    color:#fff;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 60px;
+.container{
+
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar{
+
     position:sticky;
     top:0;
     z-index:999;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:#0f172a;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
 }
 
-.logo{
+/* Logo */
+
+.logo h2{
+
+    color:white;
     font-size:30px;
-    font-weight:bold;
+    font-weight:700;
+
 }
 
-nav ul{
+/* Menu */
+
+.nav-links{
+
     display:flex;
     list-style:none;
-    gap:30px;
+    gap:35px;
+
 }
 
-nav ul li a{
+.nav-links a{
+
     text-decoration:none;
     color:white;
-    font-size:17px;
+    font-weight:500;
+
     transition:.3s;
+
 }
 
-nav ul li a:hover{
+.nav-links a:hover{
+
     color:#60a5fa;
+
 }
+
+/* Login Button */
 
 .login-btn{
+
+    text-decoration:none;
+
     background:#2563eb;
+
     color:white;
-    border:none;
-    padding:10px 22px;
+
+    padding:11px 24px;
+
     border-radius:8px;
-    cursor:pointer;
+
     transition:.3s;
+
 }
 
 .login-btn:hover{
+
     background:#1d4ed8;
+
 }
 
-/* ================= HEADER ================= */
-
-header{
-    background:linear-gradient(135deg,#2563eb,#4f46e5);
-    color:white;
-    text-align:center;
-    padding:70px 20px;
-}
-
-header h1{
-    font-size:60px;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:22px;
-}
-
-/* ================= HERO ================= */
+/* ---------- Hero ---------- */
 
 .hero{
-    max-width:1200px;
-    margin:60px auto;
-    padding:20px;
+
+    background:
+    linear-gradient(135deg,#2563eb,#4f46e5);
+
+    color:white;
+
     text-align:center;
+
+    padding:110px 20px;
+
 }
 
-.hero h2{
-    font-size:46px;
+/* Badge */
+
+.badge{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.15);
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+}
+
+/* Heading */
+
+.hero h1{
+
+    font-size:60px;
+
+    line-height:1.2;
+
     margin-bottom:25px;
+
 }
 
-.search{
-    width:100%;
-    max-width:550px;
-    padding:15px;
-    border-radius:10px;
-    border:1px solid #ccc;
-    font-size:18px;
-    margin-bottom:45px;
-}
+/* Paragraph */
 
-/* ================= TOOL GRID ================= */
+.hero p{
 
-.tools{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
+    max-width:720px;
 
-.card{
-    background:white;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
+    margin:auto;
 
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card h3{
-    font-size:24px;
-    margin-bottom:15px;
-}
-
-.card p{
-    color:#666;
-    margin-bottom:20px;
-}
-
-.card button{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.card button:hover{
-    background:#1d4ed8;
-}
-
-/* ================= CATEGORIES ================= */
-
-.categories{
-    max-width:1200px;
-    margin:80px auto;
-    padding:20px;
-    text-align:center;
-}
-
-.categories h2{
-    font-size:42px;
-    margin-bottom:40px;
-}
-
-.category-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.category{
-    background:white;
-    padding:30px;
-    border-radius:15px;
     font-size:20px;
-    font-weight:bold;
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
-    transition:.3s;
-    cursor:pointer;
+
+    line-height:1.8;
+
+    opacity:.95;
+
 }
 
-.category:hover{
-    background:#2563eb;
+/* Hero Buttons */
+
+.hero-buttons{
+
+    margin-top:45px;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+    display:inline-block;
+
+    margin:10px;
+
+    padding:16px 34px;
+
+    border-radius:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+/* Primary */
+
+.btn-primary{
+
+    background:white;
+
+    color:#2563eb;
+
+}
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+
+}
+
+/* Secondary */
+
+.btn-secondary{
+
+    border:2px solid white;
+
     color:white;
-    transform:translateY(-8px);
+
 }
 
-/* ================= FOOTER ================= */
+.btn-secondary:hover{
 
-footer{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:80px;
+    background:white;
+
+    color:#2563eb;
+
+    transform:translateY(-5px);
+
 }
 
-/* ================= MOBILE ================= */
+/* ---------- Stats ---------- */
 
-@media(max-width:768px){
+.stats{
 
-nav{
-    flex-direction:column;
-    padding:20px;
-    gap:15px;
-}
+    max-width:1200px;
 
-nav ul{
-    flex-wrap:wrap;
+    margin:70px auto;
+
+    display:flex;
+
     justify-content:center;
-    gap:15px;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
 }
 
-.logo{
-    font-size:24px;
+/* Stat Card */
+
+.stat{
+
+    background:white;
+
+    width:220px;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
+
 }
 
-header h1{
-    font-size:40px;
+.stat:hover{
+
+    transform:translateY(-10px);
+
 }
 
-header p{
+/* Number */
+
+.stat h2{
+
+    color:#2563eb;
+
+    font-size:42px;
+
+    margin-bottom:12px;
+
+}
+
+/* Text */
+
+.stat p{
+
+    color:#666;
+
     font-size:18px;
-}
-
-.hero h2{
-    font-size:32px;
-}
-
-.search{
-    max-width:100%;
-}
-
-.categories h2{
-    font-size:30px;
-}
-
-.category{
-    font-size:18px;
-    padding:20px;
-}
 
 }

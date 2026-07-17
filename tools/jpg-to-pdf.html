@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG to PDF - OfficeMitra</title>
+
+    <link rel="stylesheet" href="jpg-to-pdf.css">
+
+    <!-- pdf-lib -->
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+    <!-- SortableJS -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>📷 JPG to PDF</h1>
+    <p>Convert JPG & PNG images into a single PDF</p>
+</header>
+
+<main class="container">
+
+    <!-- Upload Area -->
+    <div class="upload-box" id="uploadBox">
+        <input type="file"
+               id="imageInput"
+               accept="image/png,image/jpeg"
+               multiple
+               hidden>
+
+        <button id="selectBtn">
+            Select Images
+        </button>
+
+        <p>or Drag & Drop Images Here</p>
+    </div>
+
+    <!-- Image Preview -->
+    <div id="previewContainer">
+        <h2>Selected Images</h2>
+
+        <div id="imageList"></div>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings">
+
+        <h2>PDF Settings</h2>
+
+        <label>
+            Page Size
+        </label>
+
+        <select id="pageSize">
+            <option value="A4">A4</option>
+            <option value="Letter">Letter</option>
+        </select>
+
+        <label>
+            Image Fit
+        </label>
+
+        <select id="fitMode">
+            <option value="contain">Fit Inside</option>
+            <option value="cover">Fill Page</option>
+        </select>
+
+    </div>
+
+    <!-- Convert Button -->
+    <div class="action">
+
+        <button id="convertBtn">
+            📄 Convert to PDF
+        </button>
+
+    </div>
+
+    <!-- Status -->
+    <div id="status"></div>
+
+</main>
+
+<footer>
+    © 2026 OfficeMitra | JPG to PDF Tool
+</footer>
+
+<script src="jpg-to-pdf.js"></script>
+
+</body>
+</html>

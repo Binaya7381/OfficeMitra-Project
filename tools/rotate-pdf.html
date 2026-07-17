@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rotate PDF - OfficeMitra</title>
+
+<link rel="stylesheet" href="rotate-pdf.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🔄 Rotate PDF</h1>
+
+<p>Rotate individual pages or all pages of your PDF easily.</p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- Upload -->
+
+    <div class="upload-box" id="dropZone">
+
+        <input
+            type="file"
+            id="pdfFile"
+            accept=".pdf"
+            hidden
+        >
+
+        <button id="chooseBtn">
+            Choose PDF
+        </button>
+
+        <p>or Drag & Drop PDF Here</p>
+
+    </div>
+
+
+    <!-- PDF Information -->
+
+    <div class="info-box">
+
+        <h2>PDF Information</h2>
+
+        <div class="info-grid">
+
+            <div>
+
+                <strong>File Name</strong>
+
+                <p id="fileName">No File Selected</p>
+
+            </div>
+
+            <div>
+
+                <strong>Total Pages</strong>
+
+                <p id="pageCount">0</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Toolbar -->
+
+    <div class="toolbar">
+
+        <button id="selectAllBtn">
+            ☑ Select All
+        </button>
+
+        <button id="rotateLeftSelected">
+            ↺ Rotate Left
+        </button>
+
+        <button id="rotateRightSelected">
+            ↻ Rotate Right
+        </button>
+
+        <button id="rotate180Selected">
+            ⟲ Rotate 180°
+        </button>
+
+        <button id="resetSelected">
+            🔄 Reset
+        </button>
+
+    </div>
+
+
+    <!-- Preview -->
+
+    <div id="previewContainer">
+
+        <h2>Pages</h2>
+
+        <div id="pageGrid">
+
+            <!-- JS will create page cards -->
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Action -->
+
+    <div class="bottom-action">
+
+        <button id="fixOrientationBtn">
+            ✨ Fix Mixed Orientation
+        </button>
+
+        <button id="downloadBtn">
+            ⬇ Download Rotated PDF
+        </button>
+
+    </div>
+
+
+    <div id="status"></div>
+
+</div>
+
+
+<footer>
+
+© 2026 OfficeMitra | Rotate PDF Tool
+
+</footer>
+
+
+<!-- PDF.js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<!-- PDF-LIB -->
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+<!-- JS -->
+
+<script src="rotate-pdf.js"></script>
+
+</body>
+</html>

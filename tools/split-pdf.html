@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Split PDF - OfficeMitra</title>
+
+    <meta name="description"
+        content="Split PDF pages online for free with OfficeMitra.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="split-pdf.css">
+
+    <!-- Google Font -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- PDF LIB -->
+
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container">
+
+<nav class="navbar">
+
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+<span>OfficeMitra</span>
+
+</a>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="#">PDF Tools</a></li>
+<li><a href="#">Image Tools</a></li>
+<li><a href="#">Office Tools</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="merge-hero">
+
+<div class="container">
+
+<h1>
+
+Split PDF
+
+</h1>
+
+<p>
+
+Extract pages from your PDF quickly and securely.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= Upload ================= -->
+
+<section class="merge-section">
+
+<div class="container">
+
+<div class="upload-box" id="dropZone">
+
+<i class="fa-solid fa-file-arrow-up"></i>
+
+<h2>
+
+Drag & Drop PDF Here
+
+</h2>
+
+<p>OR</p>
+
+<label for="pdfInput" class="upload-btn">
+
+Select PDF
+
+</label>
+
+<input
+type="file"
+id="pdfInput"
+accept=".pdf"
+hidden>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= PDF INFO ================= -->
+
+<section class="file-section">
+
+<div class="container">
+
+<h2>
+
+PDF Information
+
+</h2>
+
+<div id="pdfInfo">
+
+<p>
+
+No PDF Selected
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RANGE ================= -->
+
+<section class="action-section">
+
+<div class="container">
+
+<h2>
+
+Enter Page Range
+
+</h2>
+
+<br>
+
+<input
+
+type="text"
+
+id="pageRange"
+
+placeholder="Example: 1-3,5,8"
+
+style="padding:15px;width:320px;border-radius:10px;border:1px solid #ddd;">
+
+<br><br>
+
+<button
+
+id="splitBtn"
+
+class="merge-btn">
+
+<i class="fa-solid fa-scissors"></i>
+
+Split PDF
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= Progress ================= -->
+
+<section class="progress-section">
+
+<div class="container">
+
+<div class="progress-box">
+
+<div id="progressBar"></div>
+
+</div>
+
+<p id="status">
+
+Waiting...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= Download ================= -->
+
+<section class="download-section">
+
+<div class="container">
+
+<a
+
+id="downloadBtn"
+
+class="download-btn"
+
+style="display:none;">
+
+<i class="fa-solid fa-download"></i>
+
+Download Split PDF
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Why OfficeMitra?
+
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>Secure</h3>
+
+<p>
+
+Everything happens in your browser.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast</h3>
+
+<p>
+
+Instant PDF splitting.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+<h3>Responsive</h3>
+
+<p>
+
+Works on all devices.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+<p>
+
+© 2026 OfficeMitra. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="split-pdf.js"></script>
+
+</body>
+
+</html>

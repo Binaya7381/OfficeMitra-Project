@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Delete PDF Pages | OfficeMitra</title>
+
+    <link rel="stylesheet" href="delete-pages.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🗑 Delete PDF Pages</h1>
+
+    <p>Delete one or multiple pages from your PDF instantly.</p>
+
+</header>
+
+<div class="container">
+
+    <!-- Upload -->
+
+    <div class="upload-box" id="dropZone">
+
+        <input
+            type="file"
+            id="pdfFile"
+            accept=".pdf"
+            hidden
+        >
+
+        <button id="chooseBtn">
+            Choose PDF
+        </button>
+
+        <p>or Drag & Drop PDF Here</p>
+
+    </div>
+
+
+    <!-- PDF Information -->
+
+    <div class="info-box">
+
+        <h2>PDF Information</h2>
+
+        <div class="info-grid">
+
+            <div>
+
+                <strong>File Name</strong>
+
+                <p id="fileName">No File Selected</p>
+
+            </div>
+
+            <div>
+
+                <strong>Total Pages</strong>
+
+                <p id="pageCount">0</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Toolbar -->
+
+    <div class="toolbar">
+
+        <button id="selectAllBtn">
+
+            ☑ Select All
+
+        </button>
+
+        <button id="clearSelectionBtn">
+
+            ↩ Clear Selection
+
+        </button>
+
+        <button id="deleteSelectedBtn">
+
+            🗑 Delete Selected
+
+        </button>
+
+        <button id="deleteOddBtn">
+
+            Delete Odd
+
+        </button>
+
+        <button id="deleteEvenBtn">
+
+            Delete Even
+
+        </button>
+
+    </div>
+
+
+    <!-- Page Preview -->
+
+    <div id="previewContainer">
+
+        <h2>PDF Pages</h2>
+
+        <div id="pageGrid">
+
+            <!-- JavaScript will create page cards -->
+
+        </div>
+
+    </div>
+
+
+    <!-- Delete Range -->
+
+    <div class="range-box">
+
+        <h2>Delete Page Range</h2>
+
+        <div class="range-inputs">
+
+            <input
+                type="number"
+                id="startPage"
+                placeholder="Start Page"
+                min="1"
+            >
+
+            <input
+                type="number"
+                id="endPage"
+                placeholder="End Page"
+                min="1"
+            >
+
+            <button id="deleteRangeBtn">
+
+                Delete Range
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bottom Buttons -->
+
+    <div class="bottom-action">
+
+        <button id="undoBtn">
+
+            ↩ Undo Delete
+
+        </button>
+
+        <button id="downloadBtn">
+
+            ⬇ Download PDF
+
+        </button>
+
+    </div>
+
+
+    <div id="status"></div>
+
+</div>
+
+<footer>
+
+    © 2026 OfficeMitra | Delete PDF Pages Tool
+
+</footer>
+
+
+<!-- PDF.js -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+<!-- PDF-LIB -->
+
+<script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+<!-- JS -->
+
+<script src="delete-pages.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PDF to JPG - OfficeMitra</title>
+
+    <link rel="stylesheet" href="pdf-to-jpg.css">
+
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+    <!-- JSZip -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>📄 PDF to JPG</h1>
+    <p>Convert PDF pages into high-quality JPG images</p>
+</header>
+
+<main class="container">
+
+    <!-- Upload Area -->
+    <div class="upload-box" id="uploadBox">
+
+        <input
+            type="file"
+            id="pdfInput"
+            accept="application/pdf"
+            hidden>
+
+        <button id="selectBtn">
+            Select PDF
+        </button>
+
+        <p>OR</p>
+        <p>Drag & Drop PDF Here</p>
+
+    </div>
+
+    <!-- PDF Information -->
+    <section class="info-box">
+
+        <h2>PDF Information</h2>
+
+        <div class="info-grid">
+
+            <div>
+                <strong>File Name:</strong>
+                <span id="fileName">No file selected</span>
+            </div>
+
+            <div>
+                <strong>Total Pages:</strong>
+                <span id="pageCount">0</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Preview -->
+    <section id="previewContainer">
+
+        <h2>Page Preview</h2>
+
+        <div id="imageList"></div>
+
+    </section>
+
+    <!-- Settings -->
+    <section class="settings">
+
+        <h2>Conversion Settings</h2>
+
+        <label for="quality">JPG Quality</label>
+
+        <select id="quality">
+            <option value="1">High</option>
+            <option value="0.8">Medium</option>
+            <option value="0.6">Low</option>
+        </select>
+
+    </section>
+
+    <!-- Action -->
+    <div class="action">
+
+        <button id="convertBtn">
+            🖼 Convert to JPG
+        </button>
+        <button id="downloadZipBtn">
+    📦 Download All as ZIP
+        </button>
+
+    </div>
+
+    <div id="status"></div>
+
+</main>
+
+<footer>
+    © 2026 OfficeMitra | PDF to JPG Tool
+</footer>
+
+<!-- JavaScript -->
+<script src="pdf-to-jpg.js"></script>
+
+</body>
+
+</html>

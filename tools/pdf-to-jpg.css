@@ -1,0 +1,265 @@
+/* ==========================================
+   OfficeMitra - PDF to JPG
+   Version 2.0
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+/* Header */
+
+header{
+    background:#0d6efd;
+    color:#fff;
+    text-align:center;
+    padding:30px 20px;
+}
+
+header h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:16px;
+    opacity:.9;
+}
+
+/* Container */
+
+.container{
+    max-width:1100px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* Upload Box */
+
+.upload-box{
+    background:#fff;
+    border:3px dashed #0d6efd;
+    border-radius:12px;
+    padding:50px 20px;
+    text-align:center;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.upload-box:hover{
+    background:#eef5ff;
+}
+
+.upload-box button{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:14px 30px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.upload-box button:hover{
+    background:#0b5ed7;
+}
+
+.upload-box p{
+    margin-top:15px;
+    color:#666;
+}
+
+/* Information Box */
+
+.info-box{
+    margin-top:35px;
+    background:#fff;
+    border-radius:10px;
+    padding:25px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.info-box h2{
+    margin-bottom:20px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.info-grid div{
+    background:#f8f9fa;
+    padding:15px;
+    border-radius:8px;
+}
+
+/* Preview */
+
+#previewContainer{
+    margin-top:40px;
+}
+
+#previewContainer h2{
+    margin-bottom:20px;
+}
+
+#imageList{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:20px;
+}
+
+.page-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.page-card:hover{
+    transform:translateY(-4px);
+}
+
+.page-card canvas{
+    width:100%;
+    display:block;
+}
+
+.page-number{
+    text-align:center;
+    padding:12px;
+    font-weight:bold;
+}
+
+/* Settings */
+
+.settings{
+    margin-top:40px;
+    background:#fff;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.settings h2{
+    margin-bottom:20px;
+}
+
+.settings label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.settings select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+/* Action Buttons */
+
+.action{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+#convertBtn,
+#downloadZipBtn{
+    min-width:220px;
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    color:#fff;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#convertBtn{
+    background:#198754;
+}
+
+#convertBtn:hover{
+    background:#157347;
+}
+
+#downloadZipBtn{
+    background:#0d6efd;
+}
+
+#downloadZipBtn:hover{
+    background:#0b5ed7;
+}
+
+/* Status */
+
+#status{
+    margin-top:25px;
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+    color:#0d6efd;
+}
+
+/* Footer */
+
+footer{
+    margin-top:60px;
+    padding:20px;
+    text-align:center;
+    background:#fff;
+    border-top:1px solid #ddd;
+    color:#666;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    .upload-box{
+        padding:35px 15px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    #imageList{
+        grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+    }
+
+    .action{
+        flex-direction:column;
+    }
+
+    #convertBtn,
+    #downloadZipBtn{
+        width:100%;
+    }
+
+}

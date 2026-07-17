@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Merge PDF - OfficeMitra</title>
+
+    <meta name="description" content="Merge multiple PDF files into one PDF for free with OfficeMitra.">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="merge-pdf.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- pdf-lib -->
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+
+    <!-- SortableJS -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
+
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container">
+
+<nav class="navbar">
+
+<a href="../index.html" class="logo">
+
+<i class="fa-solid fa-file-pdf"></i>
+
+<span>OfficeMitra</span>
+
+</a>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+<li><a href="#">PDF Tools</a></li>
+<li><a href="#">Image Tools</a></li>
+<li><a href="#">Office Tools</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="merge-hero">
+
+<div class="container">
+
+<h1>Merge PDF Files</h1>
+
+<p>
+
+Combine multiple PDF files into one document.
+
+Fast • Secure • Free
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= UPLOAD ================= -->
+
+<section class="merge-section">
+
+<div class="container">
+
+<div class="upload-box" id="dropZone">
+
+<i class="fa-solid fa-cloud-arrow-up"></i>
+
+<h2>Drag & Drop PDF Files Here</h2>
+
+<p>or</p>
+
+<label for="pdfInput" class="upload-btn">
+
+Select PDF Files
+
+</label>
+
+<input
+type="file"
+id="pdfInput"
+accept=".pdf"
+multiple
+hidden>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FILE LIST ================= -->
+
+<section class="file-section">
+
+<div class="container">
+
+<h2>
+
+Selected Files
+
+</h2>
+
+<ul id="fileList">
+
+<!-- JS will create list -->
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= ACTION ================= -->
+
+<section class="action-section">
+
+<div class="container">
+
+<button id="mergeBtn" class="merge-btn">
+
+<i class="fa-solid fa-file-circle-plus"></i>
+
+Merge PDF
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= PROGRESS ================= -->
+
+<section class="progress-section">
+
+<div class="container">
+
+<div class="progress-box">
+
+<div id="progressBar"></div>
+
+</div>
+
+<p id="status">
+
+Waiting for files...
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= DOWNLOAD ================= -->
+
+<section class="download-section">
+
+<div class="container">
+
+<a
+id="downloadBtn"
+class="download-btn"
+style="display:none;">
+
+<i class="fa-solid fa-download"></i>
+
+Download Merged PDF
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Why Use OfficeMitra?
+
+</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>Fast</h3>
+
+<p>
+
+Merge PDFs within seconds.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>Secure</h3>
+
+<p>
+
+Everything happens in your browser.
+
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+<h3>Responsive</h3>
+
+<p>
+
+Works on Desktop & Mobile.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+<div class="container">
+
+<p>
+
+© 2026 OfficeMitra. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="merge-pdf.js"></script>
+
+</body>
+</html>

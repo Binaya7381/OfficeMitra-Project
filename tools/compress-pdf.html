@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compress PDF | OfficeMitra</title>
+
+    <link rel="stylesheet" href="compress-pdf.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+
+<body>
+
+<header>
+
+    <h1>📉 Compress PDF</h1>
+
+    <p>Reduce PDF size while maintaining good quality.</p>
+
+</header>
+
+<div class="container">
+
+    <!-- Upload -->
+
+    <div class="upload-box" id="dropZone">
+
+        <input
+            type="file"
+            id="pdfFile"
+            accept=".pdf"
+            hidden
+        >
+
+        <button id="chooseBtn">
+
+            Choose PDF
+
+        </button>
+
+        <p>or Drag & Drop PDF Here</p>
+
+    </div>
+
+    <!-- PDF Info -->
+
+    <div class="info-box">
+
+        <div>
+
+            <strong>File Name</strong>
+
+            <p id="fileName">No File Selected</p>
+
+        </div>
+
+        <div>
+
+            <strong>Original Size</strong>
+
+            <p id="originalSize">0 MB</p>
+
+        </div>
+
+        <div>
+
+            <strong>Total Pages</strong>
+
+            <p id="pageCount">0</p>
+
+        </div>
+
+    </div>
+
+    <!-- Compression -->
+
+    <div class="compress-box">
+
+        <h2>Select Compression Level</h2>
+
+        <select id="compressionLevel">
+
+            <option value="low">
+                Low Compression (Best Quality)
+            </option>
+
+            <option value="medium" selected>
+                Medium Compression
+            </option>
+
+            <option value="high">
+                High Compression (Smaller File)
+            </option>
+
+        </select>
+
+    </div>
+
+    <!-- Progress -->
+
+    <div class="progress-box">
+
+        <div class="progress">
+
+            <div
+                class="progress-bar"
+                id="progressBar"
+            ></div>
+
+        </div>
+
+        <p id="status">
+
+            Waiting...
+
+        </p>
+
+    </div>
+
+    <!-- Result -->
+
+    <div class="result-box">
+
+        <div>
+
+            <strong>Compressed Size</strong>
+
+            <p id="compressedSize">0 MB</p>
+
+        </div>
+
+        <div>
+
+            <strong>Saved</strong>
+
+            <p id="savedPercent">0%</p>
+
+        </div>
+
+    </div>
+
+    <button id="compressBtn">
+
+        Compress PDF
+
+    </button>
+
+    <button id="downloadBtn" disabled>
+
+        Download PDF
+
+    </button>
+
+</div>
+
+<script src="compress-pdf.js"></script>
+
+</body>
+
+</html>

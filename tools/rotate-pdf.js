@@ -8,6 +8,8 @@ pdfjsLib.GlobalWorkerOptions.workerSrc =
 
 let pdfDoc = null;
 
+let originalPdfBytes = null;
+
 let pageRotations = [];
 
 const pdfFile = document.getElementById("pdfFile");
@@ -74,9 +76,13 @@ async function loadPDF(file){
 
     fileName.innerHTML=file.name;
 
-    const bytes=await file.arrayBuffer();
+    originalPdfBytes = await file.arrayBuffer();
 
-    pdfDoc=await pdfjsLib.getDocument({data:bytes}).promise;
+const bytes = originalPdfBytes.slice(0);
+
+pdfDoc = await pdfjsLib.getDocument({
+    data: bytes
+}).promise;
 
     pageCount.innerHTML=pdfDoc.numPages;
 

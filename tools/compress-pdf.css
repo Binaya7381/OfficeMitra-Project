@@ -1,0 +1,184 @@
+/* ==========================
+   OfficeMitra - Compress PDF
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: .95;
+}
+
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.upload-box,
+.info-box,
+.compress-box,
+.progress-box,
+.result-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.upload-box {
+    border: 2px dashed #2563eb;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.upload-box:hover {
+    background: #eef5ff;
+}
+
+.upload-box.dragover {
+    background: #dbeafe;
+    border-color: #1d4ed8;
+}
+
+#chooseBtn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: .3s;
+}
+
+#chooseBtn:hover {
+    background: #1d4ed8;
+}
+
+.upload-box p {
+    margin-top: 15px;
+    color: #666;
+}
+
+.info-box,
+.result-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    gap: 20px;
+}
+
+.info-box strong,
+.result-box strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #2563eb;
+}
+
+.compress-box h2 {
+    margin-bottom: 15px;
+}
+
+#compressionLevel {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.progress {
+    width: 100%;
+    height: 18px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg,#2563eb,#60a5fa);
+    transition: width .4s ease;
+}
+
+#status {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+#compressBtn,
+#downloadBtn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 15px;
+}
+
+#compressBtn {
+    background: #16a34a;
+    color: #fff;
+}
+
+#compressBtn:hover {
+    background: #15803d;
+}
+
+#downloadBtn {
+    background: #2563eb;
+    color: #fff;
+}
+
+#downloadBtn:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+#downloadBtn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+@media (max-width:768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    #compressBtn,
+    #downloadBtn {
+        font-size: 15px;
+    }
+
+}
